@@ -1,16 +1,35 @@
-# app01
+# Sudoku
 
-A new Flutter project.
+Este projeto é um jogo Sudoku desenvolvido em Flutter. Ele permite que os usuários joguem Sudoku em diferentes níveis de dificuldade e visualizem o histórico de partidas. 
+O aplicativo utiliza o pacote sudoku_dart para gerar os tabuleiros e o sqflite para armazenar os dados localmente.
 
-## Getting Started
+### Instalação
 
-This project is a starting point for a Flutter application.
+Siga os passos abaixo para rodar o projeto localmente.
 
-A few resources to get you started if this is your first Flutter project:
+#### Pré-requisitos:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter instalado na sua máquina.
+- Um editor de código, como VS Code ou Android Studio.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Passo a passo:
+
+1. Clone o repositório:
+
+  ```bash
+  git clone https://github.com/camposlaura/sudoku.git
+  ```
+
+2. Instale as dependências:
+
+  ```bash
+  flutter pub get
+  ```
+
+3. Execute o projeto:
+
+  ```bash
+  flutter run
+  ```
+
+#### Divirta-se!
