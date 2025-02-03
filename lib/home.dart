@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Sudoku")),
+      appBar: AppBar(title: Text('Sudoku')),
       body: Center(
         child: Padding(
           padding: EdgeInsets.all(50),
@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
                 keyboardType: TextInputType.text,
                 controller: nameController,
                 decoration: InputDecoration(
-                  labelText: "Nome",
+                  labelText: 'Nome',
                   labelStyle: TextStyle(
                     color: Colors.black,
                     fontSize: 16,
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Escolha o nível de dificuldade:",
+                    'Escolha o nível de dificuldade:',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                       });
                     },
                     activeColor: Colors.black,
-                    title: Text("Fácil"),
+                    title: Text('Fácil'),
                   ),
                   RadioListTile(
                     value: 2,
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                       });
                     },
                     activeColor: Colors.black,
-                    title: Text("Médio"),
+                    title: Text('Médio'),
                   ),
                   RadioListTile(
                     value: 3,
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                       });
                     },
                     activeColor: Colors.black,
-                    title: Text("Difícil"),
+                    title: Text('Difícil'),
                   ),
                   RadioListTile(
                     value:  4,
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                       });
                     },
                     activeColor: Colors.black,
-                    title: Text("Especialista"),
+                    title: Text('Especialista'),
                   ),
                 ],
               ),
@@ -110,6 +110,7 @@ class _HomePageState extends State<HomePage> {
                     Game.routeName,
                     arguments: {
                       'level': selectedDifficultyLevel!,
+                      'name': nameController.text,
                     },
                   );
                 },
@@ -117,8 +118,17 @@ class _HomePageState extends State<HomePage> {
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
                 ),
-                child: Text("JOGAR"),
+                child: Text('JOGAR'),
               ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                Navigator.pushNamed(context, '/historico');
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white),
+                child: Text('VER HISTÓRICO'),),
             ],
           ),
         ),
