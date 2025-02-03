@@ -1,10 +1,18 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'package:sudoku/game.dart';
+import 'package:sudoku/home.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
+    initialRoute: "/",
+    routes: {
+      "/home": (context) => HomePage(),
+      Game.routeName: (context) => Game()
+    },
     title: "Sudoku",
     debugShowCheckedModeBanner: false,
-    home: Home(),
+    home: HomePage()
   ));
 }
